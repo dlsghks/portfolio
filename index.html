@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pull-out Tab Folders Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- 상단 고정 헤더 -->
+    <header id="main-header">
+        <div class="logo" onclick="moveToStep(-1)">DESIGN PORTFOLIO</div>
+        <nav>
+            <ul>
+                <li><a onclick="moveToStep(0)" class="active">01. Resume</a></li>
+                <li><a onclick="moveToStep(1)">02. Contents</a></li>
+                <li><a onclick="moveToStep(2)">03. Works</a></li>
+                <li><a onclick="moveToStep(3)">04. Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="stage">
+        <!-- [마지막 화면] THE END 아웃트로 박스 -->
+        <div id="outro-wrapper">
+            <div class="outro-content">
+                <div class="outro-title">THE END</div>
+                <div class="outro-desc">포트폴리오를 끝까지 확인해주셔서 감사합니다.</div>
+                <button class="outro-btn" onclick="moveToStep(-1)">처음으로</button>
+            </div>
+        </div>
+
+        <!-- 첫 화면 인트로 봉투 -->
+        <div id="envelope-wrapper">
+            <div class="envelope-top">
+                <div class="env-title">Design Portfolio</div>
+                <div class="env-badge">작품집이 밀봉되어 있습니다 ~ 열어보세요</div>
+            </div>
+            <div class="envelope-bottom">
+                <div class="env-hint">⬇️ 휠을 내려서 파일철을 열어주세요</div>
+            </div>
+        </div>
+
+        <!-- 4장의 탭 카드 섹션들 (각 탭 또는 카드를 누르면 해당 인덱스로 이동) -->
+        <div class="file-section" id="file1" data-tab="01. RESUME" onclick="moveToStep(0)">
+            <h2>Resume</h2>
+            <p>첫 번째 파일철 내용: 이력서 및 프로필 영역입니다.</p>
+        </div>
+        <div class="file-section" id="file2" data-tab="02. CONTENTS" onclick="moveToStep(1)">
+            <h2>Contents</h2>
+            <p>두 번째 파일철 내용: 프로젝트 목차 및 소개 영역입니다.</p>
+        </div>
+        <div class="file-section" id="file3" data-tab="03. WORKS" onclick="moveToStep(2)">
+            <h2>Works</h2>
+            <p>세 번째 파일철 내용: 주요 디자인 작업물 영역입니다.</p>
+        </div>
+        <div class="file-section" id="file4" data-tab="04. CONTACT" onclick="moveToStep(3)">
+            <h2>Contact</h2>
+            <p>네 번째 파일철 내용: 연락처 및 마무리 영역입니다.</p>
+        </div>
+    </div>
+
+    <script src="./js/javascript.js"></script>
+</body>
+</html>

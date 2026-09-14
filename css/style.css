@@ -1,0 +1,292 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Pretendard', sans-serif;
+            background-color: #0b1329;
+        }
+
+        /* 상단 고정 헤더 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            z-index: 1000;
+            border-bottom: 1px solid #ddd;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        header.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        header .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #333;
+            cursor: pointer;
+            user-select: none;
+            transition: color 0.2s ease;
+        }
+
+        header .logo:hover {
+            color: #16a34a;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        header nav ul li a:hover,
+        header nav ul li a.active {
+            color: #16a34a;
+        }
+
+        /* 전체 스테이지 컨테이너 */
+        #stage {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* [마지막 화면] THE END 아웃트로 박스 */
+        #outro-wrapper {
+            position: absolute;
+            width: 85%;
+            height: 80%;
+            background: #111827;
+            border: 1px solid #374151;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 0;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        #outro-wrapper.visible {
+            opacity: 1;
+        }
+
+        .outro-content {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .outro-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: #f8fafc;
+            margin-bottom: 15px;
+        }
+
+        .outro-desc {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .outro-btn {
+            background: #16a34a;
+            color: #ffffff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .outro-btn:hover {
+            background: #15803d;
+            transform: translateY(-2px);
+        }
+
+        /* [첫 화면] 밀봉된 파일철 인트로 봉투 */
+        #envelope-wrapper {
+            position: absolute;
+            width: 85%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            z-index: 200;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .envelope-top {
+            flex: 1;
+            background: #ffffff;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 20px;
+            transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+            box-shadow: 0 -10px 20px rgba(0,0,0,0.1);
+        }
+
+        .envelope-bottom {
+            flex: 1;
+            background: #111827;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            border: 1px solid #374151;
+            border-top: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 20px;
+            transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        #envelope-wrapper.opened .envelope-top {
+            transform: translateY(-150%);
+        }
+        #envelope-wrapper.opened .envelope-bottom {
+            transform: translateY(150%);
+        }
+
+        .env-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 10px;
+        }
+        .env-badge {
+            background: #bef264;
+            color: #111;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+        .env-hint {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+
+        /* [포트폴리오 카드 섹션들] */
+        .file-section {
+            position: absolute;
+            width: 85%;
+            height: 80%;
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-radius: 0 12px 12px 12px;
+            padding: 50px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            transform: translateY(50px);
+            opacity: 0;
+            transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s ease, box-shadow 1s ease;
+            backface-visibility: hidden;
+            pointer-events: none;
+        }
+
+        /* 상단 계단식 탭 (클릭 가능하도록 설정) */
+        .file-section::before {
+            content: attr(data-tab);
+            position: absolute;
+            top: -35px;
+            width: 150px;
+            height: 35px;
+            background: inherit;
+            border: 1px solid #cbd5e1;
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #333;
+            box-shadow: 0 -3px 8px rgba(0,0,0,0.05);
+            cursor: pointer;
+            pointer-events: auto; /* 카드가 아래로 빠져나가 비활성화되어도 탭은 클릭 가능 */
+            transition: filter 0.3s ease;
+        }
+
+        .file-section::before:hover {
+            filter: brightness(0.95);
+        }
+
+        #file1 { z-index: 4; background-color: #ffffff; }
+        #file1::before { left: 0px; }
+
+        #file2 { z-index: 3; background-color: #f7fee7; }
+        #file2::before { left: 155px; }
+
+        #file3 { z-index: 2; background-color: #ecfccb; }
+        #file3::before { left: 310px; }
+
+        #file4 { z-index: 1; background-color: #f8fafc; }
+        #file4::before { left: 465px; }
+
+        .file-section.in-place {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .file-section.pulled-out {
+            transform: translateY(113%);
+            opacity: 1;
+            box-shadow: 0 30px 50px rgba(0,0,0,0.1);
+            pointer-events: none;
+        }
+
+        .file-section.pulled-out::before {
+            filter: brightness(0.85);
+        }
+
+        .file-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #111;
+        }
