@@ -22,12 +22,14 @@
     </header>
 
     <div id="stage">
-        <!-- [마지막 화면] THE END 아웃트로 박스 -->
+        <!-- [마지막 화면] 반대로 닫히는 아웃트로 봉투/박스 -->
         <div id="outro-wrapper">
-            <div class="outro-content">
+            <div class="outro-top">
                 <div class="outro-title">THE END</div>
                 <div class="outro-desc">포트폴리오를 끝까지 확인해주셔서 감사합니다.</div>
-                <button class="outro-btn" onclick="moveToStep(-1)">처음으로</button>
+            </div>
+            <div class="outro-bottom">
+                <button class="outro-btn" onclick="moveToStep(-1)">처음으로 돌아가기</button>
             </div>
         </div>
 
@@ -42,20 +44,28 @@
             </div>
         </div>
 
-        <!-- 4장의 탭 카드 섹션들 (각 탭 또는 카드를 누르면 해당 인덱스로 이동) -->
-        <div class="file-section" id="file1" data-tab="01. RESUME" onclick="moveToStep(0)">
+        <!-- 독립된 모든 카드 탭 컨테이너 -->
+        <div id="tabs-wrapper">
+            <div class="file-tab" onclick="moveToStep(0)">01. RESUME</div>
+            <div class="file-tab" onclick="moveToStep(1)">02. CONTENTS</div>
+            <div class="file-tab" onclick="moveToStep(2)">03. WORKS</div>
+            <div class="file-tab" onclick="moveToStep(3)">04. CONTACT</div>
+        </div>
+
+        <!-- 4장의 카드 섹션들 -->
+        <div class="file-section" id="file1">
             <h2>Resume</h2>
             <p>첫 번째 파일철 내용: 이력서 및 프로필 영역입니다.</p>
         </div>
-        <div class="file-section" id="file2" data-tab="02. CONTENTS" onclick="moveToStep(1)">
+        <div class="file-section" id="file2">
             <h2>Contents</h2>
             <p>두 번째 파일철 내용: 프로젝트 목차 및 소개 영역입니다.</p>
         </div>
-        <div class="file-section" id="file3" data-tab="03. WORKS" onclick="moveToStep(2)">
+        <div class="file-section" id="file3">
             <h2>Works</h2>
             <p>세 번째 파일철 내용: 주요 디자인 작업물 영역입니다.</p>
         </div>
-        <div class="file-section" id="file4" data-tab="04. CONTACT" onclick="moveToStep(3)">
+        <div class="file-section" id="file4">
             <h2>Contact</h2>
             <p>네 번째 파일철 내용: 연락처 및 마무리 영역입니다.</p>
         </div>
