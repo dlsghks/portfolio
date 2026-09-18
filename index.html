@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Portfolio</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
 </head>
+
 <body>
 
     <!-- 상단 고정 헤더 -->
@@ -30,7 +32,12 @@
             </div>
             <div class="outro-bottom">
                 <button class="outro-btn" onclick="moveToStep(-1)">처음으로 돌아가기</button>
+                <div class="contact-information">
+                    <div class="tel">✆ 010.0000.0000</div>
+                    <div class="e-mail">✉ dlsghks11511@gmail.com</div>
+                </div>
             </div>
+
         </div>
 
         <!-- 첫 화면 인트로 봉투 -->
@@ -41,6 +48,10 @@
             </div>
             <div class="envelope-bottom">
                 <div class="env-hint">⬇️ 휠을 내려서 파일철을 열어주세요</div>
+                <div class="contact-information">
+                    <div class="tel">✆ 010.0000.0000</div>
+                    <div class="e-mail">✉ dlsghks11511@gmail.com</div>
+                </div>
             </div>
         </div>
 
@@ -54,8 +65,125 @@
 
         <!-- 4장의 카드 섹션들 -->
         <div class="file-section" id="file1">
-            <h2>Resume</h2>
-            <p>첫 번째 파일철 내용: 이력서 및 프로필 영역입니다.</p>
+            <div class="porfile-wrap">
+                <div class="porfile-top">
+                    <h2 class="my-name"></h2>
+                    <p class="my-desc"></p>
+                </div>
+
+                <div class="nutshell">
+                    <p></p>
+                </div>
+
+
+                <div class="porfile-bottom">
+                    <div class="inf-wrap">
+                        <div class="inf-img">
+                            <img src="./images/user.png" alt="사람 아이콘">
+                        </div>
+                        <div class="birth"></div>
+                        <div class="birth-detail"></div>
+                    </div>
+
+                    <div class="inf-wrap">
+                        <div class="inf-img">
+                            <img src="./images/location.png" alt="위치 핀포인트 아이콘">
+                        </div>
+                        <div class="location">LOCATION</div>
+                        <div class="location-detail">경기도 성남시</div>
+                    </div>
+
+                    <div class="inf-wrap">
+                        <div class="inf-img">
+                            <img src="./images/mail.png" alt="메일 아이콘">
+                        </div>
+                        <div class="e-mail">EMAIL</div>
+                        <div class="e-mail-detail"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="ID-photo">
+                <img src="./images/user.png" alt="프로필 사진">
+            </div>
+
+            <div class="about">
+
+                <div class="about-me">
+                    <h2>ABOUT ME</h2>
+                    <p></p>
+                </div>
+
+                <div class="skill">
+                    <h2>SKILLS</h2>
+                    <ul class="skill-list">
+                        <li>
+                            <img src="./images/UIUX.svg" alt="uiux아이콘">
+                            <h3>UI / UX DESIGN</h3>
+                            <div class="detail-list">
+                                <ul>
+                                    <li>figma</li>
+                                    <li>wireframe</li>
+                                    <li>prototype</li>
+                                    <li>responsive design</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/web-icon.svg" alt="">
+                            <h3>WEB PUBLISHING</h3>
+                            <div class="detail-list">
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Accessibillity</li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/FRONT-END.svg" alt="">
+                            <h3>FRONT-END</h3>
+                            <div class="detail-list">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="./images/bulb-icon.svg" alt="">
+                            <h3>PLANNING</h3>
+                            <div class="detail-list">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="experience">
+                    <h2>EXPERIENCE</h2>
+                    <ul class="experience-list">
+                        <li>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </li>
+                        <li>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
         <div class="file-section" id="file2">
             <h2>Contents</h2>
@@ -71,6 +199,7 @@
         </div>
     </div>
 
-    <script src="./js/javascript.js"></script>
+    <!-- <script src="./js/javascript.js"></script> -->
 </body>
+
 </html>

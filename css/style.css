@@ -170,6 +170,18 @@ header nav ul li a.active {
     transition: background 0.2s, transform 0.2s;
 }
 
+.contact-information{
+    color: #94a3b8;
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    position: absolute;
+    text-align: end;
+    right: 15px;
+    bottom: 10px;
+    font-size: 0.8rem;
+}
+
 .outro-btn:hover {
     background: #15803d;
     transform: translateY(-2px);
