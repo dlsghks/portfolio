@@ -64,128 +64,169 @@
         </div>
 
         <!-- 4장의 카드 섹션들 -->
+
+
         <div class="file-section" id="file1">
-            <div class="profile-wrap">
-                <div class="profile-top">
-                    <h2 class="my-name">신인환</h2>
-                    <p class="my-desc">WEB DESIGN & FRONT-END</p>
-                </div>
 
-                <div class="nutshell">
-                    <p>사용자가 이해하기 쉬운 화면을 만둘고 디자인한 결과물을 직접 구현하는 웹디자이너를 목표로 합니다.</p>
-                </div>
+            <div class="profile-layout">
 
+                <!-- 왼쪽: 프로필 -->
+                <div class="profile-left">
 
-                <div class="profile-bottom">
-                    <div class="info-item">
-                        <img src="./images/user.png" alt="사람 아이콘">
-                        <div class="info-text">
+                    <div class="profile-heading">
+                        <span class="section-label">PROFILE</span>
+                        <h2 class="my-name">신인환 <span>›</span></h2>
+                        <p class="my-desc">WEB DESIGN &amp; FRONT-END</p>
+
+                        <p class="nutshell">
+                            사용자가 이해하기 쉬운 화면을 만들고<br>
+                            디자인한 결과물을 직접 구현하는 것을 좋아합니다.
+                        </p>
+                    </div>
+
+                    <div class="ID-photo">
+                        <img src="./images/profile.jpg" alt="프로필 사진">
+                    </div>
+
+                    <div class="profile-info">
+                        <div class="info-item">
+                            <img src="./images/user.png" alt="">
                             <span>BIRTH</span>
-                            <p>1997.09.01</p>
+                            <p>1997. 06. 24</p>
                         </div>
-                    </div>
 
-
-                    <div class="inf-wrap">
-                        <div class="inf-img">
-                            <img src="./images/location.png" alt="위치 핀포인트 아이콘">
+                        <div class="info-item">
+                            <img src="./images/location.png" alt="">
+                            <span>LOCATION</span>
+                            <p>경기도 성남시</p>
                         </div>
-                        <div class="location">LOCATION</div>
-                        <div class="location-detail">경기도 성남시</div>
-                    </div>
 
-                    <div class="inf-wrap">
-                        <div class="inf-img">
-                            <img src="./images/mail.png" alt="메일 아이콘">
+                        <div class="info-item">
+                            <img src="./images/mail.png" alt="">
+                            <span>EMAIL</span>
+                            <p>이메일 주소</p>
                         </div>
-                        <div class="e-mail">EMAIL</div>
-                        <div class="e-mail-detail"></div>
                     </div>
 
                 </div>
-            </div>
 
-            <div class="ID-photo">
-                <img src="./images/user.png" alt="프로필 사진">
-            </div>
+                <!-- 오른쪽: 소개와 스킬 -->
+                <div class="profile-right">
 
-            <div class="about">
+                    <section class="about-me">
+                        <div class="section-heading">
+                            <span>01</span>
+                            <h2>ABOUT ME</h2>
+                            <div></div>
+                        </div>
 
-                <div class="about-me">
-                    <h2>ABOUT ME</h2>
-                    <p>게임기획 업무를 경험한 뒤, 현재는 웹디자인과 프론트엔드를 공부하며 UI/UX부터 웹 구현까지 직접 경험하고 있습니다.</p>
-                    <p>새로운 것을 배우고 직접 만들어보는 과정을 즐기며 디자인과 개발 사이의 연결을 중요시 생각합니다.</p>
-                </div>
-
-                <div class="skill">
-                    <h2>SKILLS</h2>
-                    <ul class="skill-list">
-                        <li>
-                            <img src="./images/UIUX.svg" alt="uiux 아이콘">
-                            <h3>UI / UX DESIGN</h3>
-                            <div class="detail-list">
-                                <ul>
-                                    <li>figma</li>
-                                    <li>wireframe</li>
-                                    <li>prototype</li>
-                                    <li>responsive design</li>
-                                </ul>
+                        <div class="about-content">
+                            <div>
+                                <p>
+                                    게임기획 업무를 경험한 뒤 현재는 웹디자인과
+                                    프론트엔드를 공부하며 UI/UX부터 웹 구현까지
+                                    직접 경험하고 있습니다.
+                                </p>
+                                <p>
+                                    새로운 것을 배우고 직접 만들어보는 과정을 즐기며
+                                    디자인과 개발 사이의 연결을 중요하게 생각합니다.
+                                </p>
                             </div>
-                        </li>
-                        <li>
-                            <img src="./images/web-icon.svg" alt="웹 아이콘">
-                            <h3>WEB PUBLISHING</h3>
-                            <div class="detail-list">
-                                <ul>
+
+                            <aside class="currently">
+                                <strong>CURRENTLY<br>LEARNING</strong>
+                                <p>WEB DESIGN</p>
+                                <p>FRONT-END</p>
+                                <p>UI / UX</p>
+                            </aside>
+                        </div>
+                    </section>
+
+                    <section class="skill">
+                        <div class="section-heading">
+                            <span>02</span>
+                            <h2>SKILLS</h2>
+                            <div></div>
+                        </div>
+
+                        <ul class="skill-list">
+                            <li>
+                                <img src="./images/UIUX.svg" alt="">
+                                <h3>UI / UX DESIGN</h3>
+                                <ul class="detail-list">
+                                    <li>Figma</li>
+                                    <li>Wireframe</li>
+                                    <li>Prototype</li>
+                                    <li>Responsive Design</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <img src="./images/web-icon.svg" alt="">
+                                <h3>WEB PUBLISHING</h3>
+                                <ul class="detail-list">
                                     <li>HTML</li>
                                     <li>CSS</li>
-                                    <li>Accessibillity</li>
+                                    <li>Accessibility</li>
+                                    <li>Web Standards</li>
                                 </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="./images/FRONT-END.svg" alt="프론트엔드아이콘">
-                            <h3>FRONT-END</h3>
-                            <div class="detail-list">
-                                <ul>
-                                    <li>javascript</li>
+                            </li>
+
+                            <li>
+                                <img src="./images/FRONT-END.svg" alt="">
+                                <h3>FRONT-END</h3>
+                                <ul class="detail-list">
+                                    <li>JavaScript</li>
                                     <li>API</li>
-                                    <li>Git / gitHub</li>
+                                    <li>Git / GitHub</li>
                                 </ul>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="./images/bulb-icon.svg" alt="전구아이콘">
-                            <h3>PLANNING</h3>
-                            <div class="detail-list">
-                                <ul>
-                                    <li>Information Architeture</li>
-                                    <li>Uset Flow</li>
+                            </li>
+
+                            <li>
+                                <img src="./images/bulb-icon.svg" alt="">
+                                <h3>PLANNING</h3>
+                                <ul class="detail-list">
+                                    <li>Information Architecture</li>
+                                    <li>User Flow</li>
                                     <li>Problem Solving</li>
                                 </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                </div>
+
+                <!-- 하단: 경력 -->
+                <section class="experience">
+                    <div class="section-heading">
+                        <span>03</span>
+                        <h2>EXPERIENCE</h2>
+                        <div></div>
+                    </div>
+
+                    <ul class="experience-list">
+                        <li>
+                            <p class="experience-date">2026.06 ~ 현재</p>
+                            <div>
+                                <h3>Web Design &amp; Front-end Study</h3>
+                                <p>UI / UX · Publishing · Responsive Web</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <p class="experience-date">2022.03 ~ 2023.05</p>
+                            <div>
+                                <h3>NEXON KOREA · Game Planner</h3>
+                                <p>System · Content · Event · BM Planning</p>
                             </div>
                         </li>
                     </ul>
-                </div>
+                </section>
 
-                <div class="experience">
-                    <h2>EXPERIENCE</h2>
-                    <ul class="experience-list">
-                        <li>
-                            <p>2026.06 ~ (현재진행중)</p>
-                            <p>Web Design & Front-end Study</p>
-                            <p>UI / UX &middot; Publishing &middot; Responsive Web</p>
-                        </li>
-                        <li>
-                            <p>2022.03 ~ 2023.05 (약 1년 3개월)</p>
-                            <p>NEXON KOREA &middot; Game Planner</p>
-                            <p>System &middot; Content &middot; Event &middot; BM Planning</p>
-                        </li>
-                    </ul>
-                </div>
             </div>
-
         </div>
+
+
         <div class="file-section" id="file2">
             <h2>Contents</h2>
             <p>두 번째 파일철 내용: 프로젝트 목차 및 소개 영역입니다.</p>
