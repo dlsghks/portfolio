@@ -89,3 +89,15 @@ header button,
         text-align: center;
     }
 }
+
+
+/* Start the first visit from the same open position used when returning home. */
+@starting-style {
+    #envelope-wrapper:not(.opened) .envelope-top {
+        transform: translateY(-130%);
+    }
+
+    #envelope-wrapper:not(.opened) .envelope-bottom {
+        transform: translateY(130%);
+    }
+}
