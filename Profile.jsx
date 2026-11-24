@@ -131,30 +131,30 @@ export default function Profile() {
                         </li>
                     </ul>
                 </section>
+                <section className="experience">
+                    <div className="section-heading">
+                        <span>03</span>
+                        <h2>EXPERIENCE</h2>
+                        <div></div>
+                    </div>
+                    <ul className="experience-list">
+                        <li>
+                            <p className="experience-date">2026.06 ~ 현재</p>
+                            <div>
+                                <h3>Web Design &amp; Front-end Study</h3>
+                                <p>UI / UX · Publishing · Responsive Web</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p className="experience-date">2022.03 ~ 2023.05</p>
+                            <div>
+                                <h3>NEXON KOREA · Game Planner</h3>
+                                <p>System · Content · Event · BM Planning</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
             </div>
-            <section className="experience">
-                <div className="section-heading">
-                    <span>03</span>
-                    <h2>EXPERIENCE</h2>
-                    <div></div>
-                </div>
-                <ul className="experience-list">
-                    <li>
-                        <p className="experience-date">2026.06 ~ 현재</p>
-                        <div>
-                            <h3>Web Design &amp; Front-end Study</h3>
-                            <p>UI / UX · Publishing · Responsive Web</p>
-                        </div>
-                    </li>
-                    <li>
-                        <p className="experience-date">2022.03 ~ 2023.05</p>
-                        <div>
-                            <h3>NEXON KOREA · Game Planner</h3>
-                            <p>System · Content · Event · BM Planning</p>
-                        </div>
-                    </li>
-                </ul>
-            </section>
         </div>
     )
 }
