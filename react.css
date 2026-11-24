@@ -177,3 +177,75 @@ header button,
         grid-template-rows: auto;
     }
 }
+
+/* Resume typography */
+#file1 {
+    padding: clamp(24px, 2.8vw, 48px) clamp(20px, 3.2vw, 56px);
+}
+
+#file1 .profile-layout {
+    row-gap: 20px;
+}
+
+#file1 .profile-right {
+    gap: 20px;
+}
+
+#file1 .section-heading {
+    margin-bottom: 14px;
+}
+
+#file1 .section-label,
+#file1 .info-item span,
+#file1 .currently strong,
+#file1 .experience-date {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#file1 .my-desc,
+#file1 .skill-list h3,
+#file1 .experience-list h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#file1 .section-heading h2 {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+#file1 .resume-projects h3 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+#file1 .nutshell,
+#file1 .about-content > div > p,
+#file1 .resume-projects p,
+#file1 .resume-projects dl {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+#file1 .info-item p,
+#file1 .currently p,
+#file1 .detail-list li,
+#file1 .experience-list li div p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#file1 .info-item {
+    grid-template-columns: 22px minmax(68px, 82px) minmax(0, 1fr);
+}
+
+@media (max-width: 650px) {
+    #file1 .about-content {
+        gap: 16px;
+    }
+
+    #file1 .section-heading h2 {
+        flex-shrink: 1;
+    }
+}
