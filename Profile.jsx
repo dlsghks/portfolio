@@ -19,7 +19,26 @@ export default function Profile() {
                         디자인한 결과물을 직접 구현하는 것을 좋아합니다.
                     </p>
                 </div>
-                <div className="ID-photo" aria-hidden="true" />
+                <section className="resume-projects" aria-labelledby="resume-projects-title">
+                    <div className="section-heading">
+                        <h2 id="resume-projects-title">SELECTED PROJECTS</h2>
+                        <div></div>
+                    </div>
+                    <article>
+                        <h3><a href="https://ott-project-phi.vercel.app/">Wavve + RetroV</a></h3>
+                        <p className="project-role">6인 팀 프로젝트 · 팀장 / 프론트엔드</p>
+                        <dl>
+                            <dt>직접 구현</dt>
+                            <dd>React로 Wavve 홈과 카테고리별 메인을 개발하고 RetroV를 서비스에 통합했습니다.</dd>
+                            <dt>팀 작업 통합 및 개선</dt>
+                            <dd>팀원별 작업을 통합하고 화면 간 이동을 점검해 피드백을 반영했습니다. 쇼츠 좋아요와 모바일 마이페이지 진입 시 비로그인 사용자에게 로그인 안내가 표시되도록 수정했습니다.</dd>
+                        </dl>
+                    </article>
+                    <article>
+                        <h3><a href="https://dlsghks.github.io/National-Museum-of-Korea/">국립중앙박물관 리디자인</a></h3>
+                        <p>공지사항 탭과 메인 배너를 구현하고, 화면 크기에 맞춰 레이아웃을 구성했습니다.</p>
+                    </article>
+                </section>
                 <div className="profile-info">
                     <div className="info-item">
                         <img src={User} alt="" />
@@ -96,7 +115,7 @@ export default function Profile() {
                             <img src={FrontEnd} alt="" />
                             <h3>FRONT-END</h3>
                             <ul className="detail-list">
-                                <li>JavaScript</li>
+                                <li>JavaScript · React</li>
                                 <li>API</li>
                                 <li>Git / GitHub</li>
                             </ul>

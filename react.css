@@ -101,3 +101,79 @@ header button,
         transform: translateY(130%);
     }
 }
+
+/* Resume */
+#file1 {
+    display: block;
+}
+
+#file1 .profile-layout {
+    height: auto;
+    min-height: 100%;
+    grid-template-rows: minmax(min-content, 1fr) auto;
+}
+
+#file1 .profile-left {
+    display: flex;
+    flex-direction: column;
+}
+
+#file1 .profile-info {
+    align-self: stretch;
+    margin-top: auto;
+}
+
+#file1 .resume-projects {
+    padding-top: 18px;
+    border-top: 1px solid #c7d8ee;
+}
+
+#file1 .resume-projects .section-heading {
+    margin-bottom: 14px;
+}
+
+#file1 .resume-projects article + article {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid #c7d8ee;
+}
+
+#file1 .resume-projects h3 {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#file1 .resume-projects a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+#file1 .resume-projects p,
+#file1 .resume-projects dl {
+    margin-top: 5px;
+    color: #42618b;
+    font-size: 12px;
+    line-height: 1.65;
+    word-break: keep-all;
+}
+
+#file1 .resume-projects .project-role,
+#file1 .resume-projects dt {
+    color: #153d7a;
+    font-weight: 700;
+}
+
+#file1 .resume-projects dt {
+    margin-top: 8px;
+}
+
+#file1 .resume-projects dd {
+    margin: 0;
+}
+
+@media (max-width: 1000px) {
+    #file1 .profile-layout {
+        grid-template-rows: auto;
+    }
+}
