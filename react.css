@@ -1,0 +1,91 @@
+header nav button {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+header nav button:hover,
+header nav button.active {
+    color: #16a34a;
+}
+
+header button,
+.env-hint {
+    border: 0;
+    background: none;
+    font-family: inherit;
+}
+
+.file-tab {
+    font-family: inherit;
+    text-align: left;
+}
+
+.env-hint {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+@media (max-width: 1000px) {
+    #file1 .profile-left,
+    #file1 .experience {
+        grid-row: auto;
+    }
+
+    #file1 {
+        display: block;
+    }
+}
+
+@media (max-width: 800px), (max-height: 1020px) {
+    #tabs-wrapper {
+        top: max(10%, 105px);
+    }
+
+    .file-section {
+        top: max(10%, 105px);
+        height: min(80%, calc(100% - 115px));
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 0 12px;
+    }
+
+    header nav ul {
+        gap: 8px;
+    }
+
+    header .logo,
+    header nav button {
+        font-size: clamp(0.58rem, 2.4vw, 0.9rem);
+    }
+
+    .file-tab {
+        width: 25%;
+        padding-left: 3px;
+        font-size: clamp(0.55rem, 2vw, 0.82rem);
+    }
+
+    .file-tab.active-tab {
+        font-size: clamp(0.55rem, 2vw, 0.9rem);
+    }
+
+    .file-tab:nth-child(2) { left: 25%; }
+    .file-tab:nth-child(3) { left: 50%; }
+    .file-tab:nth-child(4) { left: 75%; }
+
+    .env-title,
+    .outro-title {
+        font-size: 2rem;
+    }
+
+    .outro-desc {
+        padding-inline: 12px;
+        text-align: center;
+    }
+}
