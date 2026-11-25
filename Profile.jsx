@@ -6,7 +6,7 @@ import WebIcon from './images/web-icon.svg'
 import FrontEnd from './images/FRONT-END.svg'
 import BulbIcon from './images/bulb-icon.svg'
 
-export default function Profile() {
+export default function Profile({ onProjectDetails }) {
     return (
         <div className="profile-layout">
             <div className="profile-left">
@@ -26,6 +26,9 @@ export default function Profile() {
                     </div>
                     <article>
                         <h3><a href="https://ott-project-phi.vercel.app/">Wavve + RetroV</a></h3>
+                        <button type="button" className="project-detail-button" aria-label="Wavve + RetroV 상세 보기" onClick={() => onProjectDetails(1)}>
+                            상세 보기 →
+                        </button>
                         <p className="project-role">6인 팀 프로젝트 · 팀장 / 프론트엔드</p>
                         <dl>
                             <dt>직접 구현</dt>
@@ -36,6 +39,9 @@ export default function Profile() {
                     </article>
                     <article>
                         <h3><a href="https://dlsghks.github.io/National-Museum-of-Korea/">국립중앙박물관 리디자인</a></h3>
+                        <button type="button" className="project-detail-button" aria-label="국립중앙박물관 리디자인 상세 보기" onClick={() => onProjectDetails(2)}>
+                            상세 보기 →
+                        </button>
                         <p>공지사항 탭과 메인 배너를 구현하고, 화면 크기에 맞춰 레이아웃을 구성했습니다.</p>
                     </article>
                 </section>

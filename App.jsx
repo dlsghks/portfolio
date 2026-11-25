@@ -5,8 +5,8 @@ import './react.css'
 
 const sections = [
     { title: 'Resume' },
-    { title: 'Contents', description: '두 번째 파일철 내용: 프로젝트 목차 및 소개 영역입니다.' },
-    { title: 'Works', description: '세 번째 파일철 내용: 주요 디자인 작업물 영역입니다.' },
+    { title: 'Wavve + RetroV', description: '6인 팀장으로 React 기반 Wavve 홈과 카테고리별 메인을 개발하고 RetroV를 연결했습니다.', url: 'https://ott-project-phi.vercel.app/' },
+    { title: 'Museum Redesign', description: '국립중앙박물관 웹사이트의 공지사항 탭과 메인 배너를 구현하고 화면 크기에 맞춰 레이아웃을 구성했습니다.', url: 'https://dlsghks.github.io/National-Museum-of-Korea/' },
     { title: 'Contact', description: '네 번째 파일철 내용: 연락처 및 마무리 영역입니다.' },
 ]
 
@@ -129,7 +129,7 @@ export default function App() {
                     <SectionLinks active={active} onNavigate={moveTo} tabs />
                 </div>
 
-                {sections.map(({ title, description }, index) => (
+                {sections.map(({ title, description, url }, index) => (
                     <section
                         key={title}
                         id={`file${index + 1}`}
@@ -137,7 +137,13 @@ export default function App() {
                         aria-label={title}
                         inert={step !== index}
                     >
-                        {index === 0 ? <Profile /> : <><h2>{title}</h2><p>{description}</p></>}
+                        {index === 0 ? <Profile onProjectDetails={moveTo} /> : (
+                            <>
+                                <h2>{title}</h2>
+                                <p>{description}</p>
+                                {url && <a href={url}>사이트 보기 ↗</a>}
+                            </>
+                        )}
                     </section>
                 ))}
             </main>

@@ -311,3 +311,31 @@ header button,
         margin-top: 0;
     }
 }
+
+.project-detail-button,
+.file-section > a {
+    margin-block: 8px 4px;
+    padding: 7px 12px;
+    border: 1px solid #c7d8ee;
+    border-radius: 5px;
+    background: #eef4fb;
+    color: #153d7a;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.project-detail-button:hover,
+.file-section > a:hover {
+    background: #dce8f7;
+}
+
+.file-tab {
+    white-space: normal;
+}
+
+@media (max-width: 800px) {
+    .file-tab {
+        overflow-wrap: anywhere;
+    }
+}
