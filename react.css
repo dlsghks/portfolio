@@ -300,3 +300,14 @@ header button,
         padding-top: 12px;
     }
 }
+
+@media (min-width: 1001px) {
+    #file1 .profile-left,
+    #file1 .profile-right {
+        justify-content: space-between;
+    }
+
+    #file1 .profile-info {
+        margin-top: 0;
+    }
+}
